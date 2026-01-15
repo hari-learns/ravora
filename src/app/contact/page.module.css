@@ -1,0 +1,71 @@
+.wrapper {
+    padding: 120px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.content {
+    max-width: 700px;
+    width: 100%;
+}
+
+.title {
+    font-size: 3rem;
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    margin-bottom: 64px;
+}
+
+.lead {
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: -0.02em;
+    margin-bottom: 48px;
+}
+
+.card {
+    padding: 40px;
+    border: 1px solid #eaeaea;
+    border-radius: 8px;
+    background: #fafafa;
+}
+
+.label {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+    margin-bottom: 16px;
+    font-weight: 600;
+}
+
+.email {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    color: var(--foreground);
+    display: block;
+    margin-bottom: 16px;
+    word-break: break-all;
+}
+
+.email:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+}
+
+.sub {
+    color: var(--accent);
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    .wrapper {
+        padding: 80px 0;
+    }
+
+    .email {
+        font-size: 1.5rem;
+    }
+}

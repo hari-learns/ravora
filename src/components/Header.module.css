@@ -1,0 +1,38 @@
+.header {
+    padding: 24px 0;
+    position: sticky;
+    top: 0;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    z-index: 100;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: 800;
+    font-size: 1.2rem;
+    letter-spacing: -0.05em;
+    text-transform: uppercase;
+    color: var(--foreground);
+}
+
+.links {
+    display: flex;
+    gap: 24px;
+}
+
+.link {
+    font-size: 0.95rem;
+    color: var(--accent);
+    transition: color 0.2s ease;
+}
+
+.link:hover {
+    color: var(--foreground);
+}

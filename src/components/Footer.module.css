@@ -1,0 +1,19 @@
+.footer {
+    padding: 48px 0;
+    margin-top: 80px;
+    border-top: 1px solid #eaeaea;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--accent);
+    font-size: 0.9rem;
+}
+
+.credit {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    opacity: 0.6;
+}
