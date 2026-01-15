@@ -1,5 +1,6 @@
 import ProjectCard from '@/components/ProjectCard';
 import CreativeShape from '@/components/CreativeShape';
+import WaveText from '@/components/WaveText';
 import styles from './page.module.css';
 
 export default function Home() {
@@ -34,7 +35,7 @@ export default function Home() {
           />
         </div>
         <div className={styles.more}>
-          <p>And more in the pipeline...</p>
+          <WaveText text="And more in the pipeline..." />
         </div>
       </section>
     </div>

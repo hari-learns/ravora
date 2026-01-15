@@ -1,0 +1,26 @@
+.waveWrapper {
+    display: inline-block;
+}
+
+.char {
+    display: inline-block;
+    animation: wave 1.5s infinite ease-in-out;
+    transform-origin: bottom center;
+}
+
+@keyframes wave {
+
+    0%,
+    100% {
+        transform: translateY(0);
+        opacity: 0.7;
+        /* Keep the original opacity from the design */
+    }
+
+    50% {
+        transform: translateY(-6px);
+        opacity: 1;
+        color: var(--foreground);
+        /* Highlight slightly at peaks */
+    }
+}
