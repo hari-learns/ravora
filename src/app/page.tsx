@@ -24,7 +24,7 @@ export default function Home() {
         <div className={styles.grid}>
           <ProjectCard
             title="Lemonade Stand News"
-            description="Your daily news, simplified. In your language, in your style."
+            description="Unlimited information, the way you want it."
             href="https://lemonadestandnews.com"
           />
           <ProjectCard
