@@ -24,9 +24,9 @@ export default function Home() {
       <section className={styles.projects}>
         <div className={styles.grid}>
           <ProjectCard
-            title="Lemonade Stand News"
-            description="Unlimited information, the way you want it."
-            href="https://lemonadestandnews.com"
+            title="Wireneurons"
+            description="AI-powered platform for Chartered Accountants."
+            href="https://wireneurons.com"
           />
           <ProjectCard
             title="Wishlize"
