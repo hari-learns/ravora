@@ -9,19 +9,24 @@ export default function About() {
 
                     <div className={styles.prose}>
                         <p className={styles.lead}>
-                            A company ran by one man, letting his creative thoughts come to life as solutions.
+                            A company run on pure excitement and adrenaline, driven by the joy of creation.
                         </p>
 
                         <hr className={styles.divider} />
 
                         <p>
-                            Ravora Apps is not a traditional software house. It is a creative studio where ideas match execution.
-                            We believe that tech solutions can be unique and innovative, as long as the service is sweet and serves a purpose.
+                            Ravora Apps is not a traditional software house. It is a creative studio where ideas meet execution.
+                            We believe technology solutions can be unique and innovative when the service is thoughtful,
+                            purposeful, and built with care.
                         </p>
 
                         <p>
                             By leveraging the power of Artificial Intelligence, we accelerate the development of
                             classy, modern applications that solve real-world problems.
+                        </p>
+
+                        <p>
+                            If you have an idea, we can bring it to life.
                         </p>
 
                         <div className={styles.signature}>

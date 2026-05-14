@@ -9,7 +9,7 @@ export default function Contact() {
 
                     <div className={styles.prose}>
                         <p className={styles.lead}>
-                            Got an idea? Let's bring it to life.
+                            Got an idea? Let&apos;s bring it to life.
                         </p>
 
                         <div className={styles.card}>

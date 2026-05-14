@@ -33,6 +33,12 @@ export default function Home() {
             description="Give life to your customers wishes"
             isComingSoon={true}
           />
+          <ProjectCard
+            title="Aubstrac"
+            description="Enabling effortless wealth with save while you spend algo"
+            href="https://aubstrac.com"
+            isComingSoon={true}
+          />
         </div>
         <div className={styles.more}>
           <WaveText text="And more in the pipeline..." />

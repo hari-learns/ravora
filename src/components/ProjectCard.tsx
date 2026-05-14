@@ -9,8 +9,14 @@ interface ProjectCardProps {
 }
 
 export default function ProjectCard({ title, description, href, isComingSoon }: ProjectCardProps) {
+    const cardClassName = [
+        styles.card,
+        isComingSoon ? styles.comingSoon : '',
+        href ? styles.clickable : '',
+    ].filter(Boolean).join(' ');
+
     const CardContent = (
-        <div className={`${styles.card} ${isComingSoon ? styles.comingSoon : ''}`}>
+        <div className={cardClassName}>
             <div className={styles.content}>
                 <h3 className={styles.title}>{title}</h3>
                 <p className={styles.description}>{description}</p>
@@ -27,7 +33,7 @@ export default function ProjectCard({ title, description, href, isComingSoon }: 
         </div>
     );
 
-    if (href && !isComingSoon) {
+    if (href) {
         return (
             <Link href={href} target="_blank" rel="noopener noreferrer" className={styles.linkWrapper}>
                 {CardContent}
