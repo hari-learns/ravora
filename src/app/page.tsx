@@ -29,14 +29,14 @@ export default function Home() {
             href="https://wireneurons.com"
           />
           <ProjectCard
-            title="Wishlize"
-            description="Give life to your customers wishes"
-            isComingSoon={true}
-          />
-          <ProjectCard
             title="Aubstrac"
             description="Enabling effortless wealth with save while you spend algo"
             href="https://aubstrac.com"
+            isComingSoon={true}
+          />
+          <ProjectCard
+            title="Wishlize"
+            description="Give life to your customers wishes"
             isComingSoon={true}
           />
         </div>

@@ -15,7 +15,7 @@ export default function About() {
                         <hr className={styles.divider} />
 
                         <p>
-                            Ravora Apps is not a traditional software house. It is a creative studio where ideas meet execution.
+                            Ravora apps is a creative studio.
                             We believe technology solutions can be unique and innovative when the service is thoughtful,
                             purposeful, and built with care.
                         </p>
