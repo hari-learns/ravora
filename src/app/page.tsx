@@ -30,7 +30,7 @@ export default function Home() {
           />
           <ProjectCard
             title="Aubstrac"
-            description="Enabling effortless wealth with save while you spend algo"
+            description='Enabling effortless wealth with "save while you spend" algo'
             href="https://aubstrac.com"
             isComingSoon={true}
           />

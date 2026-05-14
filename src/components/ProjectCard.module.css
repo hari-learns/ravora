@@ -15,6 +15,10 @@
     background: #fff;
 }
 
+.content {
+    min-width: 0;
+}
+
 .clickable {
     cursor: pointer;
 }
@@ -51,9 +55,13 @@
 
 .arrow {
     color: var(--foreground);
+    flex: 0 0 auto;
+    margin-left: 24px;
 }
 
 .badge {
+    display: inline-flex;
+    align-items: center;
     font-size: 0.8rem;
     background: #000;
     color: #fff;
@@ -62,6 +70,7 @@
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.05em;
+    white-space: nowrap;
 }
 
 @media (max-width: 768px) {
@@ -74,5 +83,6 @@
 
     .arrow {
         align-self: flex-end;
+        margin-left: 0;
     }
 }
