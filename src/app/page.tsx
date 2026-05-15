@@ -32,7 +32,6 @@ export default function Home() {
             title="Aubstrac"
             description='Enabling effortless wealth with "save while you spend" algo'
             href="https://aubstrac.com"
-            isComingSoon={true}
           />
           <ProjectCard
             title="Wishlize"
