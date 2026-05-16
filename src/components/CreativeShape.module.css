@@ -2,7 +2,7 @@
     position: relative;
     display: inline-flex;
     outline: none;
-    cursor: help;
+    cursor: default;
 }
 
 .reveal:focus-visible .scene {
