@@ -13,7 +13,7 @@ export default function Home() {
             <span className={styles.highlight}>accelerated with AI.</span>
           </h1>
           <p className={styles.subtitle}>
-            We build software that simplifies complex problems.
+            Driven by the joy of creation, we build great things solving problems.
           </p>
         </div>
         <div className={styles.heroVisual}>

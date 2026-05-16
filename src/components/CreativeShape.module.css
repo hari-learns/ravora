@@ -1,8 +1,78 @@
+.reveal {
+    position: relative;
+    display: inline-flex;
+    outline: none;
+    cursor: help;
+}
+
+.reveal:focus-visible .scene {
+    outline: 2px solid rgba(0, 0, 0, 0.2);
+    outline-offset: 18px;
+    border-radius: 18px;
+}
+
 .scene {
     width: 200px;
     height: 200px;
     perspective: 600px;
     margin: auto;
+}
+
+.motivePopup {
+    position: absolute;
+    left: 50%;
+    bottom: calc(100% + 34px);
+    z-index: 2;
+    width: min(430px, 70vw);
+    padding: 18px 20px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(14px);
+    box-shadow: 0 22px 70px rgba(0, 0, 0, 0.1);
+    color: var(--foreground);
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, 12px);
+    transition: opacity 180ms ease, transform 180ms ease;
+}
+
+.motivePopup::after {
+    position: absolute;
+    left: 50%;
+    bottom: -7px;
+    width: 12px;
+    height: 12px;
+    content: "";
+    background: rgba(255, 255, 255, 0.88);
+    border-right: 1px solid rgba(0, 0, 0, 0.08);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    transform: translateX(-50%) rotate(45deg);
+}
+
+.reveal:hover .motivePopup,
+.reveal:focus .motivePopup,
+.reveal:focus-within .motivePopup {
+    opacity: 1;
+    transform: translate(-50%, 0);
+}
+
+.quote {
+    color: var(--accent);
+    font-size: 0.88rem;
+    line-height: 1.55;
+}
+
+.credit {
+    margin-top: 10px;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+}
+
+.motive {
+    margin-top: 14px;
+    color: var(--accent);
+    font-size: 0.78rem;
+    line-height: 1.5;
 }
 
 .cube {
@@ -89,3 +159,11 @@
 
 /* Optional: Add an inner cube or "core" for more complexity/tech feel could be cool, 
    but let's keep it minimal and classy first. */
+
+@media (max-width: 768px) {
+    .motivePopup {
+        bottom: calc(100% + 24px);
+        width: min(330px, calc(100vw - 48px));
+        padding: 16px;
+    }
+}
