@@ -20,7 +20,7 @@ export default function CreativeShape() {
                 </p>
                 <p className={styles.credit}>- T.S. Eliot</p>
                 <p className={styles.motive}>
-                    The quote is our motive in creating innovative algorithms.
+                    The quote is our motive in creating useful products.
                 </p>
             </div>
         </div>
