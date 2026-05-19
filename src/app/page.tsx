@@ -99,9 +99,9 @@ export default function Home() {
           <p className={styles.complianceNote}>
             Purchase, sale, redemption, and custody of digital gold and silver are handled by
             Augmont Goldtech Private Limited. Aubstrac coordinates merchant-funded reward
-            collection and periodic settlement or distribution to Augmont and users through
-            its payments provider, PayU, as applicable. All services remain subject to
-            applicable provider terms, KYC, taxes, charges, and settlement rules.
+            collection, settlement, and distribution with Augmont and eligible users. All
+            services remain subject to applicable provider terms, KYC, taxes, charges, and
+            settlement rules.
           </p>
         </section>
 
