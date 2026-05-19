@@ -22,42 +22,88 @@ export default function Home() {
       </section>
 
       <section className={styles.projects}>
-        <div className={styles.featuredProject}>
-          <div className={styles.featuredHeader}>
-            <div>
-              <p className={styles.eyebrow}>Main project</p>
-              <h2 className={styles.featuredTitle}>Aubstrac by Ravora Apps</h2>
+        <section className={styles.aubstracSection} aria-labelledby="aubstrac-title">
+          <div className={styles.aubstracHeader}>
+            <div className={styles.aubstracIntro}>
+              <h2 id="aubstrac-title" className={styles.aubstracTitle}>Aubstrac by Ravora</h2>
+              <p>
+                Aubstrac helps users receive merchant-funded rewards as digital gold and
+                silver. Through the “save while you spend” model, eligible partner-merchant
+                transactions can unlock digital gold or silver purchased for the user through
+                Augmont.
+              </p>
             </div>
-            <a
-              href="https://aubstrac.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.featuredArrow}
-              aria-label="Open Aubstrac"
-            >
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-            </a>
+            <div className={styles.featuredLinks} aria-label="Aubstrac links">
+              <a href="https://aubstrac.com" target="_blank" rel="noopener noreferrer">
+                Visit Aubstrac
+              </a>
+              <a href="https://aubstrac.com/digital-gold" target="_blank" rel="noopener noreferrer">
+                Digital Gold
+              </a>
+              <a href="https://aubstrac.com/terms" target="_blank" rel="noopener noreferrer">
+                Terms
+              </a>
+            </div>
           </div>
-          <p className={styles.featuredDescription}>
-            Aubstrac is a Ravora Apps product that helps users receive merchant-funded
-            rewards as digital gold and silver. Through the “save while you spend” model,
-            eligible partner-merchant transactions can unlock digital gold or silver purchased
-            for the user through Augmont.
+
+          <div className={styles.assetFlow}>
+            <div className={styles.flowCopy}>
+              <h3>How digital assets are purchased</h3>
+              <ul>
+                <li>User shops with an eligible Aubstrac partner merchant.</li>
+                <li>The merchant funds the applicable reward amount.</li>
+                <li>Aubstrac calculates the eligible gold or silver value.</li>
+                <li>Digital gold or silver is purchased for the user through Augmont Goldtech Private Limited.</li>
+                <li>The user can view the credited balance in their Aubstrac account.</li>
+              </ul>
+            </div>
+            <div className={styles.assetVisual} aria-hidden="true">
+              <div className={styles.coinStack}>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <div className={styles.purchasePulse}></div>
+              <div className={styles.assetLedger}>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+          </div>
+
+          <div className={`${styles.assetFlow} ${styles.sellFlow}`}>
+            <div className={styles.assetVisual} aria-hidden="true">
+              <div className={styles.assetToken}></div>
+              <div className={styles.sellRail}>
+                <span></span>
+              </div>
+              <div className={styles.settlementLines}>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+            <div className={styles.flowCopy}>
+              <h3>How those assets can be sold</h3>
+              <ul>
+                <li>User opens their Aubstrac account and reviews the available balance.</li>
+                <li>User chooses the gold or silver quantity to sell or redeem, where enabled.</li>
+                <li>Aubstrac routes the request through the partnered digital metal provider.</li>
+                <li>Value is processed as per provider terms, taxes, fees, and settlement timelines.</li>
+                <li>User receives the applicable proceeds or benefit after successful processing.</li>
+              </ul>
+            </div>
+          </div>
+
+          <p className={styles.complianceNote}>
+            Purchase, sale, redemption, and custody of digital gold and silver are handled by
+            Augmont Goldtech Private Limited. Aubstrac coordinates merchant-funded reward
+            collection and periodic settlement or distribution to Augmont and users through
+            its payments provider, PayU, as applicable. All services remain subject to
+            applicable provider terms, KYC, taxes, charges, and settlement rules.
           </p>
-          <div className={styles.featuredLinks} aria-label="Aubstrac links">
-            <a href="https://aubstrac.com" target="_blank" rel="noopener noreferrer">
-              Visit Aubstrac
-            </a>
-            <a href="https://aubstrac.com/digital-gold" target="_blank" rel="noopener noreferrer">
-              Digital Gold
-            </a>
-            <a href="https://aubstrac.com/terms" target="_blank" rel="noopener noreferrer">
-              Terms
-            </a>
-          </div>
-        </div>
+        </section>
 
         <div className={styles.grid}>
           <ProjectCard
