@@ -6,14 +6,26 @@
 
 .content {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     color: var(--accent);
     font-size: 0.9rem;
 }
 
-.credit {
-    font-family: var(--font-mono);
-    font-size: 0.8rem;
-    opacity: 0.6;
+.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.mark {
+    width: 38px;
+    height: 38px;
+    opacity: 0.92;
+}
+
+@media (max-width: 480px) {
+    .brand {
+        align-items: flex-start;
+    }
 }
