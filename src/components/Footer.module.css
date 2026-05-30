@@ -12,20 +12,8 @@
     font-size: 0.9rem;
 }
 
-.brand {
-    display: inline-flex;
-    align-items: center;
-    gap: 14px;
-}
-
-.mark {
-    width: 38px;
-    height: 38px;
-    opacity: 0.92;
-}
-
 @media (max-width: 480px) {
-    .brand {
+    .content {
         align-items: flex-start;
     }
 }

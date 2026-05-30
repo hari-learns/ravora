@@ -8,7 +8,7 @@ export default function Header() {
       <div className="container">
         <nav className={styles.nav}>
           <Link href="/" className={styles.logo} aria-label="Ravora Apps home">
-            <LogoMark className={styles.headerMark} priority />
+            <LogoMark className={styles.headerMark} animated priority />
           </Link>
           <div className={styles.links}>
             <Link href="/about" className={styles.link}>
