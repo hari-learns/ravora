@@ -1,9 +1,19 @@
 import type { Metadata } from 'next';
 import styles from './page.module.css';
 
+const description =
+  'Reach Ravora Apps at hello@ravoraapps.tech about new projects, partnerships, or a quick conversation.';
+
 export const metadata: Metadata = {
   title: 'Contact | Ravora Apps',
-  description: 'Reach Ravora Apps about partnerships, custom builds, or a quick conversation.',
+  description,
+  alternates: { canonical: '/contact' },
+  openGraph: {
+    title: 'Contact Ravora Apps',
+    description,
+    url: 'https://ravoraapps.tech/contact',
+    type: 'website',
+  },
 };
 
 const ROUTES = [

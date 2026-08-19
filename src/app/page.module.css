@@ -128,13 +128,6 @@
     color: var(--ink-faint);
 }
 
-.motiveNote {
-    max-width: 56ch;
-    margin-top: 26px;
-    color: var(--ink-soft);
-    text-wrap: pretty;
-}
-
 /* Sections -------------------------------------------------------------- */
 
 .work,

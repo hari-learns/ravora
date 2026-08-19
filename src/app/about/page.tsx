@@ -2,10 +2,19 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import styles from './page.module.css';
 
+const description =
+  'Ravora Apps is a creative studio in Chennai that builds and operates its own products — thoughtful, purposeful software accelerated with AI.';
+
 export const metadata: Metadata = {
   title: 'About | Ravora Apps',
-  description:
-    'Ravora Apps is a creative studio in Chennai building modern products, accelerated with AI.',
+  description,
+  alternates: { canonical: '/about' },
+  openGraph: {
+    title: 'About Ravora Apps',
+    description,
+    url: 'https://ravoraapps.tech/about',
+    type: 'profile',
+  },
 };
 
 export default function About() {

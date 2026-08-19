@@ -88,10 +88,6 @@ export default function Home() {
             </p>
             <cite className={styles.credit}>T.S. Eliot</cite>
           </blockquote>
-          <p className={styles.motiveNote}>
-            That is the whole idea behind what we build: return to something familiar, and make it
-            worth seeing again.
-          </p>
         </div>
       </section>
 
