@@ -1,19 +1,92 @@
 .footer {
-    padding: 48px 0;
-    margin-top: 80px;
-    border-top: 1px solid #eaeaea;
+    padding: clamp(48px, 8vw, 76px) 0 32px;
+    border-top: 1px solid var(--line-soft);
+    background: var(--canvas);
 }
 
-.content {
+.grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.6fr) repeat(3, minmax(0, 1fr));
+    gap: clamp(28px, 4vw, 48px);
+}
+
+.brand {
+    max-width: 34ch;
+}
+
+.name {
+    font-size: 1.05rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+}
+
+.tagline {
+    margin-top: 8px;
+    color: var(--ink-soft);
+    font-size: 0.92rem;
+    text-wrap: pretty;
+}
+
+.column {
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    color: var(--accent);
-    font-size: 0.9rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 9px;
 }
 
-@media (max-width: 480px) {
-    .content {
-        align-items: flex-start;
+.heading {
+    margin-bottom: 3px;
+    font-family: var(--font-mono), monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+}
+
+.link,
+.email {
+    position: relative;
+    color: var(--ink-soft);
+    font-size: 0.92rem;
+    transition: color var(--hover) var(--ease);
+}
+
+.email {
+    color: var(--blue);
+    font-family: var(--font-mono), monospace;
+    font-size: 0.86rem;
+    overflow-wrap: anywhere;
+}
+
+.link:hover,
+.link:focus-visible,
+.email:hover,
+.email:focus-visible {
+    color: var(--ink);
+}
+
+.location {
+    color: var(--ink-faint);
+    font-size: 0.86rem;
+}
+
+.base {
+    margin-top: clamp(36px, 6vw, 60px);
+    padding-top: 22px;
+    border-top: 1px solid var(--line-soft);
+}
+
+.copy {
+    color: var(--ink-faint);
+    font-size: 0.82rem;
+}
+
+@media (max-width: 760px) {
+    .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .brand {
+        grid-column: 1 / -1;
     }
 }

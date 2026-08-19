@@ -1,71 +1,154 @@
 .wrapper {
-    padding: 120px 0;
-    display: flex;
-    justify-content: center;
+    padding: clamp(48px, 9vw, 96px) 0 var(--section);
+    max-width: 940px;
 }
 
-.content {
-    max-width: 700px;
-    width: 100%;
+.head {
+    max-width: 640px;
 }
 
 .title {
-    font-size: 3rem;
-    font-weight: 800;
-    letter-spacing: -0.04em;
-    margin-bottom: 64px;
+    margin-top: 14px;
+    font-size: clamp(2.1rem, 6vw, 3.4rem);
+    font-weight: 600;
+    line-height: 1.06;
+    letter-spacing: -0.035em;
+    text-wrap: balance;
 }
 
 .lead {
-    font-size: 1.8rem;
-    font-weight: 500;
-    line-height: 1.4;
-    letter-spacing: -0.02em;
-    margin-bottom: 48px;
+    max-width: 52ch;
+    margin-top: 20px;
+    color: var(--ink-soft);
+    font-size: clamp(1rem, 1.7vw, 1.14rem);
+    text-wrap: pretty;
 }
 
 .card {
-    padding: 40px;
-    border: 1px solid #eaeaea;
-    border-radius: 8px;
-    background: #fafafa;
+    position: relative;
+    display: grid;
+    overflow: hidden;
+    margin-top: clamp(32px, 6vw, 56px);
+    padding: clamp(24px, 4vw, 40px);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    background: var(--surface);
+    transition:
+        border-color var(--hover) var(--ease),
+        box-shadow var(--hover) var(--ease),
+        transform var(--hover) var(--ease);
 }
 
-.label {
+.cardLabel {
+    font-family: var(--font-mono), monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
-    font-size: 0.8rem;
-    letter-spacing: 0.1em;
-    color: var(--accent);
-    margin-bottom: 16px;
+    color: var(--ink-faint);
+}
+
+.cardEmail {
+    margin-top: 12px;
+    color: var(--blue);
+    /* Long address on a 320px screen: shrink before it ever overflows. */
+    font-size: clamp(1.3rem, 5.4vw, 2.4rem);
     font-weight: 600;
-}
-
-.email {
-    font-size: 2rem;
-    font-weight: 700;
     letter-spacing: -0.03em;
-    color: var(--foreground);
-    display: block;
-    margin-bottom: 16px;
-    word-break: break-all;
+    overflow-wrap: anywhere;
 }
 
-.email:hover {
-    text-decoration: underline;
-    text-decoration-thickness: 2px;
+.cardAction {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 20px;
+    color: var(--ink-soft);
+    font-size: 0.92rem;
+    font-weight: 500;
+    transition: color var(--hover) var(--ease);
 }
 
-.sub {
-    color: var(--accent);
-    font-size: 1rem;
+.cardAction svg {
+    transition: transform var(--hover) var(--ease);
 }
 
-@media (max-width: 768px) {
-    .wrapper {
-        padding: 80px 0;
+.cardEdge {
+    position: absolute;
+    inset: 0 0 auto;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--blue), transparent);
+    opacity: 0;
+    transition: opacity var(--hover) var(--ease);
+}
+
+.card:hover,
+.card:focus-visible {
+    border-color: rgba(0, 74, 173, 0.4);
+    box-shadow: 0 18px 44px rgba(11, 14, 20, 0.09);
+    transform: translateY(-3px);
+}
+
+.card:hover .cardEdge,
+.card:focus-visible .cardEdge {
+    opacity: 1;
+}
+
+.card:hover .cardAction,
+.card:focus-visible .cardAction {
+    color: var(--blue);
+}
+
+.card:hover .cardAction svg,
+.card:focus-visible .cardAction svg {
+    transform: translate(3px, -3px);
+}
+
+.routes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+    gap: clamp(20px, 3vw, 32px);
+    margin-top: clamp(36px, 6vw, 60px);
+    list-style: none;
+}
+
+.route {
+    padding-top: 18px;
+    border-top: 1px solid var(--line);
+}
+
+.routeTitle {
+    font-size: 1.02rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+}
+
+.routeBody {
+    margin-top: 7px;
+    color: var(--ink-soft);
+    font-size: 0.94rem;
+    text-wrap: pretty;
+}
+
+.location {
+    margin-top: clamp(36px, 6vw, 56px);
+    color: var(--ink-faint);
+    font-family: var(--font-mono), monospace;
+    font-size: 0.78rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .card,
+    .cardAction,
+    .cardAction svg,
+    .cardEdge {
+        transition: none;
     }
 
-    .email {
-        font-size: 1.5rem;
+    .card:hover {
+        transform: none;
+    }
+
+    .card:hover .cardAction svg {
+        transform: none;
     }
 }

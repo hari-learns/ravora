@@ -1,45 +1,140 @@
 .header {
-    padding: 24px 0;
     position: sticky;
     top: 0;
-    background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(10px);
     z-index: 100;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+    background: color-mix(in srgb, var(--canvas) 82%, transparent);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--line-soft);
 }
 
 .nav {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    min-height: 72px;
 }
 
-.logo {
+.brand {
     display: inline-flex;
     align-items: center;
-    transition: opacity 0.2s ease;
+    gap: 12px;
 }
 
-.logo:hover {
-    opacity: 0.78;
+.wordmark {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 6px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
 }
 
-.headerMark {
-    width: 64px;
-    height: 64px;
+.wordmarkSub {
+    font-family: var(--font-mono), monospace;
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
 }
 
 .links {
     display: flex;
-    gap: 24px;
+    align-items: center;
+    gap: clamp(14px, 3vw, 28px);
 }
 
 .link {
-    font-size: 0.95rem;
-    color: var(--accent);
-    transition: color 0.2s ease;
+    position: relative;
+    padding: 4px 0;
+    font-size: 0.94rem;
+    color: var(--ink-soft);
+    transition: color var(--hover) var(--ease);
 }
 
-.link:hover {
-    color: var(--foreground);
+.link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1.5px;
+    background: var(--blue);
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    transition: transform 180ms var(--ease);
+}
+
+.link:hover,
+.link:focus-visible,
+.link[aria-current='page'] {
+    color: var(--ink);
+}
+
+.link:hover::after,
+.link:focus-visible::after,
+.link[aria-current='page']::after {
+    transform: scaleX(1);
+}
+
+.cta {
+    display: inline-flex;
+    align-items: center;
+    min-height: 40px;
+    padding: 0 16px;
+    border-radius: var(--radius-sm);
+    background: var(--ink);
+    color: var(--canvas);
+    font-size: 0.88rem;
+    font-weight: 500;
+    white-space: nowrap;
+    transition:
+        background-color var(--hover) var(--ease),
+        transform var(--hover) var(--ease);
+}
+
+.cta:hover,
+.cta:focus-visible {
+    background: var(--blue);
+    transform: translateY(-1px);
+}
+
+/*
+  No hamburger: two links and one action fit a 320px bar once the wordmark
+  suffix and the button label step down. A menu here would be chrome for its
+  own sake.
+*/
+@media (max-width: 560px) {
+    .nav {
+        min-height: 64px;
+    }
+
+    .wordmarkSub {
+        display: none;
+    }
+
+    .cta {
+        min-height: 36px;
+        padding: 0 13px;
+        font-size: 0.82rem;
+    }
+}
+
+@media (max-width: 380px) {
+    .wordmark {
+        display: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .link,
+    .link::after,
+    .cta {
+        transition: none;
+    }
+
+    .cta:hover {
+        transform: none;
+    }
 }
