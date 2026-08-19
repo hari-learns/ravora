@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react';
 import Link from 'next/link';
 import CreativeShape from '@/components/CreativeShape';
 import ProjectCard, { type Project } from '@/components/ProjectCard';
@@ -29,18 +30,24 @@ const PROJECTS: Project[] = [
   },
 ];
 
-const PRINCIPLES = [
+const PRINCIPLES: { title: string; body: ReactNode }[] = [
   {
-    title: 'Built with care',
-    body: 'Thoughtful and purposeful beats fast and forgettable. Every surface is a decision, not a default.',
+    title: 'Built with a motive',
+    body: 'Every build starts with a reason, not a brief. Mail us the idea and we will build you a high-quality demo of it, free.',
   },
   {
     title: 'Accelerated with AI',
-    body: 'We use AI to compress the distance between an idea and a working product — not to skip the thinking.',
+    body: 'We cracked it. Product, innovation and market move at the same time as the code, because the heavy lifting is done by machines that never get tired.',
   },
   {
-    title: 'Solving real problems',
-    body: 'We only build things somebody is waiting for. If it does not solve a real problem, it does not ship.',
+    title: 'Giving form and life to your ideas',
+    body: (
+      <>
+        We build the wonderful things that you could frame only in your mind — and we deliver in{' '}
+        <s className={styles.strike}>months</s> days. Not a claim about working harder; the tooling
+        genuinely changed, and delivery timelines changed with it.
+      </>
+    ),
   },
 ];
 
@@ -57,8 +64,8 @@ export default function Home() {
               <span className={styles.highlight}>accelerated with AI.</span>
             </h1>
             <p className={styles.subtitle}>
-              Driven by the joy of creation, we build great things that solve real problems —
-              from first sketch to shipped product.
+              Driven by the joy of creation, we build the wonderful things that you could frame
+              only in your mind.
             </p>
             <div className={styles.actions}>
               <Link href="#work" className={styles.primary}>
@@ -117,7 +124,7 @@ export default function Home() {
           <div className={styles.sectionHead}>
             <p className="eyebrow">How we work</p>
             <h2 id="approach-title" className={styles.sectionTitle}>
-              Three things we refuse to compromise on.
+              Three reasons to send us your idea.
             </h2>
           </div>
 

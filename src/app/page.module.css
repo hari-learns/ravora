@@ -189,6 +189,14 @@
     letter-spacing: -0.02em;
 }
 
+/* The old timeline, visibly retired rather than just claimed away. */
+.strike {
+    color: var(--ink-faint);
+    text-decoration-line: line-through;
+    text-decoration-thickness: 1.5px;
+    text-decoration-color: var(--blue);
+}
+
 .principleBody {
     color: var(--ink-soft);
     font-size: 0.96rem;

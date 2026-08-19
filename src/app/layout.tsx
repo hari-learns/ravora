@@ -31,7 +31,7 @@ const OG_IMAGE = {
 };
 
 const description =
-  'Ravora Apps is a creative studio in Chennai building and operating modern products — accelerated with AI, built with care.';
+  'Ravora Apps is a creative studio in Chennai building and operating modern products — accelerated with AI, built with a motive.';
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
