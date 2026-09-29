@@ -2,7 +2,8 @@ import Link from 'next/link';
 import styles from './Footer.module.css';
 
 const PRODUCTS = [
-  { label: 'Wireneurons', href: 'https://wireneurons.com' },
+  { label: 'Hachemicals', href: 'https://hachemicals.com/' },
+  { label: 'Everest Heat Treaters', href: 'https://everestheattreaters.com/' },
   { label: 'Aubstrac', href: 'https://aubstrac.com' },
 ];
 

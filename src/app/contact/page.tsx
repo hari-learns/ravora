@@ -38,7 +38,7 @@ export default function Contact() {
         <p className="eyebrow">Contact</p>
         <h1 className={styles.title}>Got an idea? Let&apos;s bring it to life.</h1>
         <p className={styles.lead}>
-          One inbox, read by the people who build the work. We reply to everything that is
+          We reply to everything that is
           genuinely addressed to us.
         </p>
       </header>

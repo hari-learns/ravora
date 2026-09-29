@@ -108,7 +108,6 @@ const organizationSchema = {
     availableLanguage: ['en'],
   },
   owns: [
-    { '@type': 'SoftwareApplication', name: 'Wireneurons', url: 'https://wireneurons.com' },
     { '@type': 'SoftwareApplication', name: 'Aubstrac', url: 'https://aubstrac.com' },
   ],
 };

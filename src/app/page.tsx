@@ -9,20 +9,27 @@ import styles from './page.module.css';
 const PROJECTS: Project[] = [
   {
     index: '01',
-    title: 'Wireneurons',
-    description: 'An AI-powered platform for Chartered Accountants — built around the work they actually do.',
-    discipline: 'Product · Live',
-    href: 'https://wireneurons.com',
-  },
-  {
-    index: '02',
     title: 'Aubstrac',
     description: 'Effortless wealth. A save-while-you-spend engine that turns everyday payments into gold customers own.',
     discipline: 'Product · Live',
     href: 'https://aubstrac.com',
   },
   {
+    index: '02',
+    title: 'Hachemicals',
+    description: 'Chemicals business, brought online.',
+    discipline: 'Website · Live',
+    href: 'https://hachemicals.com/',
+  },
+  {
     index: '03',
+    title: 'Everest Heat Treaters',
+    description: 'Heat treatment services, brought online.',
+    discipline: 'Website · Live',
+    href: 'https://everestheattreaters.com/',
+  },
+  {
+    index: '04',
     title: 'Wishlize',
     description: 'Giving life to what your customers wish for, before they have to ask twice.',
     discipline: 'Product',
@@ -103,7 +110,7 @@ export default function Home() {
           <div className={styles.sectionHead}>
             <p className="eyebrow">Work</p>
             <h2 id="work-title" className={styles.sectionTitle}>
-              Products we own and operate.
+              Built by, or associated with, us.
             </h2>
           </div>
 
@@ -114,7 +121,7 @@ export default function Home() {
           </Reveal>
 
           <div className={styles.more}>
-            <WaveText text="And more in the pipeline..." />
+            <WaveText text="More coming soon..." />
           </div>
         </div>
       </section>
