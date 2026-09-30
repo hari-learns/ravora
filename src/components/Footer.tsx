@@ -1,12 +1,6 @@
 import Link from 'next/link';
 import styles from './Footer.module.css';
 
-const PRODUCTS = [
-  { label: 'Hachemicals', href: 'https://hachemicals.com/' },
-  { label: 'Everest Heat Treaters', href: 'https://everestheattreaters.com/' },
-  { label: 'Aubstrac', href: 'https://aubstrac.com' },
-];
-
 export default function Footer() {
   return (
     <footer className={styles.footer}>
@@ -27,21 +21,6 @@ export default function Footer() {
             <Link href="/contact" className={styles.link}>
               Contact
             </Link>
-          </nav>
-
-          <nav className={styles.column} aria-label="Products">
-            <p className={styles.heading}>Products</p>
-            {PRODUCTS.map((item) => (
-              <a
-                key={item.href}
-                href={item.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.link}
-              >
-                {item.label}
-              </a>
-            ))}
           </nav>
 
           <div className={styles.column}>

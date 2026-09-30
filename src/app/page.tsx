@@ -1,41 +1,7 @@
 import type { ReactNode } from 'react';
-import Link from 'next/link';
 import CreativeShape from '@/components/CreativeShape';
-import ProjectCard, { type Project } from '@/components/ProjectCard';
 import Reveal from '@/components/Reveal';
-import WaveText from '@/components/WaveText';
 import styles from './page.module.css';
-
-const PROJECTS: Project[] = [
-  {
-    index: '01',
-    title: 'Aubstrac',
-    description: 'Effortless wealth. A save-while-you-spend engine that turns everyday payments into gold customers own.',
-    discipline: 'Product · Live',
-    href: 'https://aubstrac.com',
-  },
-  {
-    index: '02',
-    title: 'Hachemicals',
-    description: 'Chemicals business, brought online.',
-    discipline: 'Website · Live',
-    href: 'https://hachemicals.com/',
-  },
-  {
-    index: '03',
-    title: 'Everest Heat Treaters',
-    description: 'Heat treatment services, brought online.',
-    discipline: 'Website · Live',
-    href: 'https://everestheattreaters.com/',
-  },
-  {
-    index: '04',
-    title: 'Wishlize',
-    description: 'Giving life to what your customers wish for, before they have to ask twice.',
-    discipline: 'Product',
-    status: 'Coming soon',
-  },
-];
 
 const PRINCIPLES: { title: string; body: ReactNode }[] = [
   {
@@ -75,9 +41,9 @@ export default function Home() {
               only in your mind.
             </p>
             <div className={styles.actions}>
-              <Link href="#work" className={styles.primary}>
-                See our work
-              </Link>
+              <a href="mailto:hello@ravoraapps.tech" className={styles.primary}>
+                Get in touch
+              </a>
               <a href="mailto:hello@ravoraapps.tech" className={styles.secondary}>
                 hello@ravoraapps.tech
               </a>
@@ -102,27 +68,6 @@ export default function Home() {
             </p>
             <cite className={styles.credit}>T.S. Eliot</cite>
           </blockquote>
-        </div>
-      </section>
-
-      <section id="work" className={styles.work} aria-labelledby="work-title">
-        <div className="container">
-          <div className={styles.sectionHead}>
-            <p className="eyebrow">Work</p>
-            <h2 id="work-title" className={styles.sectionTitle}>
-              Built by, or associated with, us.
-            </h2>
-          </div>
-
-          <Reveal as="ul" className={styles.grid}>
-            {PROJECTS.map((project) => (
-              <ProjectCard key={project.title} {...project} />
-            ))}
-          </Reveal>
-
-          <div className={styles.more}>
-            <WaveText text="More coming soon..." />
-          </div>
         </div>
       </section>
 

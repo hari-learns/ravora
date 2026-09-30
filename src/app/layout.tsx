@@ -107,9 +107,6 @@ const organizationSchema = {
     areaServed: 'IN',
     availableLanguage: ['en'],
   },
-  owns: [
-    { '@type': 'SoftwareApplication', name: 'Aubstrac', url: 'https://aubstrac.com' },
-  ],
 };
 
 const websiteSchema = {
