@@ -1,7 +1,17 @@
 import type { ReactNode } from 'react';
 import CreativeShape from '@/components/CreativeShape';
+import ProjectCard, { type Project } from '@/components/ProjectCard';
 import Reveal from '@/components/Reveal';
 import styles from './page.module.css';
+
+// Our own product, made and run by Ravora Apps.
+const PRODUCT: Project = {
+  index: '01',
+  title: 'ownwords',
+  description: 'A writing app that never writes for you. It reads along, asks the questions that bring your own words out, and shares the finished piece to every network in one press.',
+  discipline: 'Our product · Early access',
+  href: 'https://ownwords.page',
+};
 
 const PRINCIPLES: { title: string; body: ReactNode }[] = [
   {
@@ -68,6 +78,21 @@ export default function Home() {
             </p>
             <cite className={styles.credit}>T.S. Eliot</cite>
           </blockquote>
+        </div>
+      </section>
+
+      <section id="product" className={styles.work} aria-labelledby="product-title">
+        <div className="container">
+          <div className={styles.sectionHead}>
+            <p className="eyebrow">Our product</p>
+            <h2 id="product-title" className={styles.sectionTitle}>
+              What we make and run ourselves.
+            </h2>
+          </div>
+
+          <Reveal as="ul" className={`${styles.grid} ${styles.product}`}>
+            <ProjectCard {...PRODUCT} />
+          </Reveal>
         </div>
       </section>
 

@@ -156,6 +156,11 @@
     list-style: none;
 }
 
+/* One product: a card at a card's width, not stretched across the page. */
+.product {
+    grid-template-columns: minmax(0, 520px);
+}
+
 .more {
     margin-top: clamp(28px, 5vw, 44px);
     color: var(--ink-faint);
